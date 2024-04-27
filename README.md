@@ -1,8 +1,6 @@
 # My Garmin Watch Face
 This repository contains a custom watchface designed in MonkeyC for Garmin Forerunner 265S.
 
-Included in the repository are images showcasing the watchface in different modes:
-
 <p align="center">
   <img src="https://github.com/azyleee/My-Garmin-Watch-Face/blob/main/SuperSimple/images/AOD.jpg" alt="Always-On Mode" width=500/>
 </p>

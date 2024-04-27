@@ -4,11 +4,11 @@ This repository contains a custom watchface designed in MonkeyC for Garmin Forer
 Included in the repository are images showcasing the watchface in different modes:
 
 <p align="center">
-  <img src="https://github.com/azyleee/My-Garmin-Watch-Face/SuperSimple/images/AOD.jpg" alt="Always-On Mode" width=500/>
+  <img src="https://github.com/azyleee/My-Garmin-Watch-Face/blob/main/SuperSimple/images/AOD.jpg" alt="Always-On Mode" width=500/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/azyleee/My-Garmin-Watch-Face/SuperSimple/images/HighPowerMode.jpg" alt="High-Power Mode" width=500/>
+  <img src="https://github.com/azyleee/My-Garmin-Watch-Face/blob/main/SuperSimple/images/HighPowerMode.JPG" alt="High-Power Mode" width=500/>
 </p>
 
 ## Description

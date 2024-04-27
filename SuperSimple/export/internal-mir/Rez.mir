@@ -1,0 +1,1481 @@
+[ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; ]
+        var BiggPS as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; ]
+        var SmolPS as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 15; @position = 27; initialized = true; ]
+        var SmolTT as Symbol;
+    }
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 18; ]
+    module JsonData {
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+    }
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 21; ]
+    module Layouts {
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 21; ]
+        <init> {
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 22; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+c_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_export_gen_006_B4258_00_source_Rez_mcgen_22_73_start:
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 23 12 ]
+            [ "c_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_export_gen_006_B4258_00_source_Rez_mcgen_22_73_start" "c_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_export_gen_006_B4258_00_source_Rez_mcgen_22_73_stop" ]
+            %rez_cmp_local_custom_drawable_15717507412302749891.1 = local;
+            %tmp.4 = getv ? :Background;
+            %tmp.1 = newc %tmp.4 ();
+            lputv %rez_cmp_local_custom_drawable_15717507412302749891.1 %tmp.1;
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 25 12 ]
+            [ "c_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_export_gen_006_B4258_00_source_Rez_mcgen_22_73_start" "c_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_export_gen_006_B4258_00_source_Rez_mcgen_22_73_stop" ]
+            %rez_cmp_local_text_TimeLabel.2 = local;
+            %tmp.7 = getm $.Toybox.WatchUi;
+            %tmp.8 = getv function ? %tmp.7 :Text;
+            %tmp.9 = newd 6;
+            %tmp.11 = const :identifier;
+            %tmp.12 = "TimeLabel";
+            %tmp.13 = dup %tmp.9;
+            %tmp.14 = aputv %tmp.13 %tmp.11 %tmp.12;
+            %tmp.16 = const :color;
+            %tmp.17 = getm $.Toybox.Graphics;
+            %tmp.18 = getv %tmp.17 :COLOR_BLUE;
+            %tmp.19 = dup %tmp.14;
+            %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+            %tmp.22 = const :locX;
+            %tmp.23 = 360;
+            %tmp.24 = 0.5;
+            %tmp.25 = mul %tmp.23 %tmp.24;
+            %tmp.26 = dup %tmp.20;
+            %tmp.27 = aputv %tmp.26 %tmp.22 %tmp.25;
+            %tmp.29 = const :locY;
+            %tmp.30 = 360;
+            %tmp.31 = lgetv %dc;
+            %tmp.32 = getv function %tmp.31 :getFontHeight;
+            %tmp.33 = getm $.Toybox.Graphics;
+            %tmp.34 = getv %tmp.33 :FONT_TINY;
+            %tmp.35 = invoke %tmp.31 %tmp.32(%tmp.34);
+            %tmp.36 = sub %tmp.30 %tmp.35;
+            %tmp.37 = 0.5;
+            %tmp.38 = mul %tmp.36 %tmp.37;
+            %tmp.39 = dup %tmp.27;
+            %tmp.40 = aputv %tmp.39 %tmp.29 %tmp.38;
+            %tmp.42 = const :justification;
+            %tmp.43 = getm $.Toybox.Graphics;
+            %tmp.44 = getv %tmp.43 :TEXT_JUSTIFY_CENTER;
+            %tmp.45 = dup %tmp.40;
+            %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+            %tmp.48 = const :font;
+            %tmp.49 = getm $.Toybox.Graphics;
+            %tmp.50 = getv %tmp.49 :FONT_TINY;
+            %tmp.51 = dup %tmp.46;
+            %tmp.52 = aputv %tmp.51 %tmp.48 %tmp.50;
+            %tmp.5 = newc %tmp.8 (%tmp.52);
+            lputv %rez_cmp_local_text_TimeLabel.2 %tmp.5;
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 27 12 ]
+            %tmp.53 = newa Array<WatchUi.Drawable> 2;
+            %tmp.55 = lgetv %rez_cmp_local_custom_drawable_15717507412302749891.1;
+            %tmp.56 = dup %tmp.53;
+            %tmp.57 = aputv %tmp.56 0 %tmp.55;
+            %tmp.59 = lgetv %rez_cmp_local_text_TimeLabel.2;
+            %tmp.60 = dup %tmp.57;
+            %tmp.61 = aputv %tmp.60 1 %tmp.59;
+            ret %tmp.61;
+c_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_export_gen_006_B4258_00_source_Rez_mcgen_22_73_stop:
+        }
+    }
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 31; ]
+    module Menus {
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 31; ]
+        <init> {
+        }
+    }
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 34; ]
+    module Strings {
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 34; ]
+        <init> {
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; ]
+        var ColorLightGray as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; ]
+        var ColorBlue as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; ]
+        var ColorRed as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 38; @position = 27; initialized = true; ]
+        var ForegroundColorTitle as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 39; @position = 27; initialized = true; ]
+        var BackgroundColorTitle as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 40; @position = 27; initialized = true; ]
+        var ColorDarkGray as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 41; @position = 27; initialized = true; ]
+        var MilitaryFormatTitle as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 42; @position = 27; initialized = true; ]
+        var ColorBlack as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 43; @position = 27; initialized = true; ]
+        var ColorWhite as Symbol;
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 44; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+    [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 47; ]
+    module Styles {
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 47; ]
+        <init> {
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 48; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 48; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 49; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 52; ]
+        module system_size__menu_header {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 52; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 53; @position = 18; ]
+            const width as Number = 360;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 54; @position = 18; ]
+            const height as Number = 137;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 57; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 57; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 58; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 59; @position = 18; ]
+            const y as Number = 227;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 62; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 62; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 63; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 66; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 66; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 67; @position = 18; ]
+            const x as Number = 61;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 68; @position = 18; ]
+            const y as Number = 79;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 71; ]
+        module system_icon_dark__about {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 71; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 72; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__about.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 73; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 74; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 75; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 76; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 79; ]
+        module system_icon_light__question {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 79; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 80; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__question.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 81; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 82; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 83; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 84; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 87; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 87; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 88; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 91; ]
+        module prompt_font__title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 91; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 92 18 ]
+                %tmp.62 = getm $.Toybox.Graphics;
+                %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_CENTER;
+                %tmp.64 = getm $.Toybox.Graphics;
+                %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_VCENTER;
+                %tmp.66 = bitor %tmp.63 %tmp.65;
+                putv self :justification %tmp.66;
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 93 18 ]
+                %tmp.67 = getm $.Toybox.Graphics;
+                %tmp.68 = getv %tmp.67 :FONT_TINY;
+                putv self :font %tmp.68;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 92; @position = 18; ]
+            const justification;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 93; @position = 18; ]
+            const font;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 96; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 96; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 97; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__discard.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 98; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 99; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 100; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 101; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 104; ]
+        module system_size__menu_item {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 104; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 105; @position = 18; ]
+            const width as Number = 360;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 106; @position = 18; ]
+            const height as Number = 87;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 109; ]
+        module system_color_dark__text {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 109; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 111 18 ]
+                %tmp.69 = getm $.Toybox.Graphics;
+                %tmp.70 = getv %tmp.69 :COLOR_TRANSPARENT;
+                putv self :background %tmp.70;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 110; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 111; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 114; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 114; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 115; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_destructive__discard.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 116; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 117; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 120; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 120; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 121; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 122; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 123; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 126; ]
+        module prompt_size__title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 126; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 127; @position = 18; ]
+            const width as Number = 227;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 128; @position = 18; ]
+            const height as Number = 79;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 131; ]
+        module confirmation_font__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 131; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 132 18 ]
+                %tmp.71 = getm $.Toybox.Graphics;
+                %tmp.72 = getv %tmp.71 :TEXT_JUSTIFY_CENTER;
+                %tmp.73 = getm $.Toybox.Graphics;
+                %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_VCENTER;
+                %tmp.75 = bitor %tmp.72 %tmp.74;
+                putv self :justification %tmp.75;
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 133 18 ]
+                %tmp.76 = getm $.Toybox.Graphics;
+                %tmp.77 = getv %tmp.76 :FONT_TINY;
+                putv self :font %tmp.77;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 132; @position = 18; ]
+            const justification;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 133; @position = 18; ]
+            const font;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 136; ]
+        module system_color_dark__background {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 136; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 137; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 138; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 141; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 142; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 145; ]
+        module system_size__launch_icon {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 145; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 146; @position = 18; ]
+            const scaleX as Number = 60;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 147; @position = 18; ]
+            const scaleY as Number = 60;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 148; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 151; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 151; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 152 18 ]
+                %tmp.78 = getm $.Toybox.WatchUi;
+                %tmp.79 = getv %tmp.78 :KEY_ENTER;
+                putv self :button %tmp.79;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 152; @position = 18; ]
+            const button;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 155; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 155; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 156 18 ]
+                %tmp.80 = getm $.Toybox.Graphics;
+                %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.81;
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 157 18 ]
+                %tmp.82 = getm $.Toybox.Graphics;
+                %tmp.83 = getv %tmp.82 :FONT_XTINY;
+                putv self :font %tmp.83;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 156; @position = 18; ]
+            const justification;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 157; @position = 18; ]
+            const font;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 160; ]
+        module confirmation_loc__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 160; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 161; @position = 18; ]
+            const x as Number = 68;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 162; @position = 18; ]
+            const y as Number = 61;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 165; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 165; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 166; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 169; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 169; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 170; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 171; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 174; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 174; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 175; @position = 18; ]
+            const x as Number = 297;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 176; @position = 18; ]
+            const y as Number = 69;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 179; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 179; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 180; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 181; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 182; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 185; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 185; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 186; @position = 18; ]
+            const x as Number = 3;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 187; @position = 18; ]
+            const y as Number = 149;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 190; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 190; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 191; @position = 18; ]
+            const width as Number = 239;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 192; @position = 18; ]
+            const height as Number = 247;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 195; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 195; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 196; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__hint_button_left_top.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 197; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 198; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 201; ]
+        module prompt_color_light__background {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 201; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 202; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 203; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 206; ]
+        module confirmation_input__delete {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 206; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 207 18 ]
+                %tmp.84 = getm $.Toybox.WatchUi;
+                %tmp.85 = getv %tmp.84 :KEY_DOWN;
+                putv self :button %tmp.85;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 207; @position = 18; ]
+            const button;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 210; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 210; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 211; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__hint_button_left_top.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 212; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 213; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 216; ]
+        module system_input__action_menu {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 216; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 217 18 ]
+                %tmp.86 = getm $.Toybox.WatchUi;
+                %tmp.87 = getv %tmp.86 :KEY_ENTER;
+                putv self :button %tmp.87;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 217; @position = 18; ]
+            const button;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 220; ]
+        module system_icon_light__save {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 220; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 221; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__save.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 222; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 223; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 224; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 225; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 228; ]
+        module prompt_color_light__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 228; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 230 18 ]
+                %tmp.88 = getm $.Toybox.Graphics;
+                %tmp.89 = getv %tmp.88 :COLOR_TRANSPARENT;
+                putv self :background %tmp.89;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 229; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 230; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 233; ]
+        module system_loc__subwindow {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 233; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 234; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 237; ]
+        module system_icon_light__warning {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 237; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 238; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__warning.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 239; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 240; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 241; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 242; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 245; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 245; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 247 18 ]
+                %tmp.90 = getm $.Toybox.Graphics;
+                %tmp.91 = getv %tmp.90 :COLOR_TRANSPARENT;
+                putv self :background %tmp.91;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 246; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 247; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 250; ]
+        module activity_color_light__background {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 250; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 251; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 252; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 255; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 255; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 256; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 259; ]
+        module system_size__screen {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 259; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 260; @position = 18; ]
+            const width as Number = 360;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 261; @position = 18; ]
+            const height as Number = 360;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 264; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 264; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 265; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 268; ]
+        module system_color_light__background {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 268; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 269; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 270; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 273; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 273; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 274; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 277; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 277; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 278; @position = 18; ]
+            const x as Number = 297;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 279; @position = 18; ]
+            const y as Number = 69;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 282; ]
+        module activity_color_dark__text {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 282; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 284 18 ]
+                %tmp.92 = getm $.Toybox.Graphics;
+                %tmp.93 = getv %tmp.92 :COLOR_TRANSPARENT;
+                putv self :background %tmp.93;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 283; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 284; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 287; ]
+        module confirmation_input__keep {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 287; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 288 18 ]
+                %tmp.94 = getm $.Toybox.WatchUi;
+                %tmp.95 = getv %tmp.94 :KEY_ESC;
+                putv self :button %tmp.95;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 288; @position = 18; ]
+            const button;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 291; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 291; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 292; @position = 18; ]
+            const x as Number = 47;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 293; @position = 18; ]
+            const y as Number = 108;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 296; ]
+        module system_icon_dark__search {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 296; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 297; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__search.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 298; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 299; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 300; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 301; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 304; ]
+        module activity_color_light__text {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 304; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 306 18 ]
+                %tmp.96 = getm $.Toybox.Graphics;
+                %tmp.97 = getv %tmp.96 :COLOR_TRANSPARENT;
+                putv self :background %tmp.97;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 305; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 306; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 309; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 309; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 310; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 311; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 312; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 315; ]
+        module system_icon_dark__save {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 315; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 316; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__save.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 317; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 318; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 319; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 320; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 323; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 323; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 324; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 327; ]
+        module system_icon_light__search {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 327; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 328; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__search.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 329; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 330; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 331; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 332; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 335; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 335; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 336; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 337; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 338; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 341; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 341; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 342; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 345; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 345; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 346; @position = 18; ]
+            const x as Number = 294;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 347; @position = 18; ]
+            const y as Number = 227;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 350; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 350; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 352 18 ]
+                %tmp.98 = getm $.Toybox.Graphics;
+                %tmp.99 = getv %tmp.98 :COLOR_TRANSPARENT;
+                putv self :background %tmp.99;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 351; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 352; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 355; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 355; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 357 18 ]
+                %tmp.100 = getm $.Toybox.Graphics;
+                %tmp.101 = getv %tmp.100 :COLOR_TRANSPARENT;
+                putv self :background %tmp.101;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 356; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 357; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 360; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 360; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 361; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 362; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 363; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 366; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 366; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 367; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 368; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 369; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 372; ]
+        module prompt_loc__title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 372; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 373; @position = 18; ]
+            const x as Number = 65;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 374; @position = 18; ]
+            const y as Number = 27;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 377; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 377; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 378; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 381; ]
+        module prompt_color_light__title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 381; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 383 18 ]
+                %tmp.102 = getm $.Toybox.Graphics;
+                %tmp.103 = getv %tmp.102 :COLOR_TRANSPARENT;
+                putv self :background %tmp.103;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 382; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 383; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 386; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 386; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 387; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 388; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 389; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 392; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 392; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 393; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__hint_button_left_middle.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 394; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 395; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 398; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 398; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 399; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__cancel.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 400; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 401; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 402; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 403; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 406; ]
+        module system_icon_light__about {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 406; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 407; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__about.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 408; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 409; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 410; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 411; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 414; ]
+        module system_size__toast_icon {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 414; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 415; @position = 18; ]
+            const scaleX as Number = 35;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 416; @position = 18; ]
+            const scaleY as Number = 35;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 417; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 420; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 420; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 421; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 424; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 425; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 426; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 427; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 430; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 430; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 431; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 432; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 433; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 436; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 436; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 437; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 440; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 440; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 441; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 444; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 445; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 446; @position = 18; ]
+            const y as Number = 227;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 449; ]
+        module activity_color_dark__background {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 449; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 450; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 451; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 454; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 454; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 455; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__hint_button_left_bottom.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 456; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 457; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 460; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 460; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 461; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 464; ]
+        module system_size__menu_icon {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 464; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 465; @position = 18; ]
+            const scaleX as Number = 42;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 466; @position = 18; ]
+            const scaleY as Number = 42;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 467; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 470; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 470; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 471; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_destructive__warning.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 472; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 473; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 476; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 477; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 480; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 480; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 481; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__cancel.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 482; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 483; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 484; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 485; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 488; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 488; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 489; @position = 18; ]
+            const width as Number = 266;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 490; @position = 18; ]
+            const height as Number = 202;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 493; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 493; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 494; @position = 18; ]
+            const x as Number = 297;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 495; @position = 18; ]
+            const y as Number = 69;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 498; ]
+        module system_color_light__text {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 498; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 500 18 ]
+                %tmp.104 = getm $.Toybox.Graphics;
+                %tmp.105 = getv %tmp.104 :COLOR_TRANSPARENT;
+                putv self :background %tmp.105;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 499; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 500; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 503; ]
+        module system_icon_light__check {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 503; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 504; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__check.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 505; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 506; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 507; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 508; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 511; ]
+        module confirmation_input__reject {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 511; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 512 18 ]
+                %tmp.106 = getm $.Toybox.WatchUi;
+                %tmp.107 = getv %tmp.106 :KEY_DOWN;
+                putv self :button %tmp.107;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 512; @position = 18; ]
+            const button;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 515; ]
+        module system_icon_light__revert {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 515; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 516; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__revert.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 517; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 518; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 519; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 520; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 523; ]
+        module system_size__subwindow {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 523; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 524; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 527; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 527; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 528; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 531; ]
+        module system_icon_dark__check {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 531; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 532; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__check.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 533; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 534; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 535; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 536; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 539; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 539; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 540; @position = 18; ]
+            const x as Number = 291;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 541; @position = 18; ]
+            const y as Number = 230;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 544; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 544; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 545; @position = 18; ]
+            const x as Number = 11;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 546; @position = 18; ]
+            const y as Number = 227;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 549; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 549; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 550; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 553; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 553; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 554; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__hint_button_left_middle.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 555; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 556; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 559; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 559; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 560; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 561; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 562; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 565; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 565; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 566; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 569; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 569; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 570; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__revert.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 571; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 572; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 573; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 574; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 577; ]
+        module system_icon_dark__question {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 577; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 578; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__question.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 579; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 580; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 581; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 582; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 585; ]
+        module system_icon_light__discard {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 585; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 586; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__discard.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 587; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 588; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 589; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 590; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 593; ]
+        module device_info {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 593; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 595 18 ]
+                %tmp.108 = getm $.Toybox.System;
+                %tmp.109 = getv %tmp.108 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.109;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 594; @position = 18; ]
+            const screenWidth as Number = 360;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 595; @position = 18; ]
+            const screenShape;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 596; @position = 18; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 597; @position = 18; ]
+            const screenHeight as Number = 360;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 598; @position = 18; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 599; @position = 18; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 602; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 602; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 603 18 ]
+                %tmp.110 = getm $.Toybox.Graphics;
+                %tmp.111 = getv %tmp.110 :TEXT_JUSTIFY_CENTER;
+                %tmp.112 = getm $.Toybox.Graphics;
+                %tmp.113 = getv %tmp.112 :TEXT_JUSTIFY_VCENTER;
+                %tmp.114 = bitor %tmp.111 %tmp.113;
+                putv self :justification %tmp.114;
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 604 18 ]
+                %tmp.115 = getm $.Toybox.Graphics;
+                %tmp.116 = getv %tmp.115 :FONT_XTINY;
+                putv self :font %tmp.116;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 603; @position = 18; ]
+            const justification;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 604; @position = 18; ]
+            const font;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 607; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 607; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 608; @position = 18; ]
+            const scaleX as Float = 0.14;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 609; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 612; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 612; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 613; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_dark__warning.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 614; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 615; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 616; @position = 18; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 617; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 620; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 620; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 621; @position = 18; ]
+            const x as Number = 180;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 622; @position = 18; ]
+            const y as Number = 54;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 623; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 624; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 627; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 627; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 628; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 631; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 631; ]
+            <init> {
+[ "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen" 633 18 ]
+                %tmp.117 = getm $.Toybox.Graphics;
+                %tmp.118 = getv %tmp.117 :COLOR_TRANSPARENT;
+                putv self :background %tmp.118;
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 632; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 633; @position = 18; ]
+            const background;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 636; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 636; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 637; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 638; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 639; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 642; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 642; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 643; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 644; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 645; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 648; ]
+        module confirmation_size__body {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 648; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 649; @position = 18; ]
+            const width as Number = 223;
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 650; @position = 18; ]
+            const height as Number = 252;
+        }
+        [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 653; ]
+        module system_icon_positive__check {
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 653; ]
+            <init> {
+            }
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 654; @position = 18; ]
+            const filename as String = "C:\\Users\\hobly\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\fr265s\\system_icon_positive__check.svg";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 655; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 656; @position = 18; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "c:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\export\gen\006-B4258-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

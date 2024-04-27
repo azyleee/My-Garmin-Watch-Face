@@ -1,0 +1,5 @@
+<fonts>
+  <font id="BiggPS" filename="ProductSansBold-114px.fnt" antialias="true"/>
+  <font id="SmolPS" filename="ProductSansBold-28px.fnt" antialias="true"/>
+  <font id="SmolTT" filename="TTNeueDBold-32px.fnt" antialias="true"/>
+</fonts>

@@ -1,0 +1,943 @@
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 2; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 4; ]
+import Toybox.System;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 5; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 7; ]
+import Toybox.SensorHistory;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 8; ]
+import Toybox.Application.Storage;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 10; ]
+using Toybox.Time.Gregorian as :Date;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 11; ]
+using Toybox.Weather;
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 16; ]
+class SuperSimpleView extends WatchUi.WatchFace{
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 16; ]
+    <init> {
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 16; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 18; @position = 16; ]
+    private
+    var BiggPS;
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 19; @position = 16; ]
+    private
+    var SmolPS;
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 22; @position = 16; ]
+    private
+    var cx;
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 23; @position = 16; ]
+    private
+    var cy;
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 24; @position = 16; ]
+    private
+    var isLowPowerMode = false;
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 25; @position = 16; ]
+    private
+    var isHidden = false;
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 27; ]
+    function initialize() as Void {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_27_26_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 28 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 29 8 ]
+        %tmp.4 = getm $.Toybox.Application;
+        %tmp.5 = getv function %tmp.4 :loadResource;
+        %tmp.7 = getv ? :Rez;
+        %tmp.8 = getv %tmp.7 :Fonts;
+        %tmp.9 = getv %tmp.8 :BiggPS;
+        %tmp.10 = invoke %tmp.4 %tmp.5(%tmp.9);
+        putv self :BiggPS %tmp.10;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 30 8 ]
+        %tmp.11 = getm $.Toybox.Application;
+        %tmp.12 = getv function %tmp.11 :loadResource;
+        %tmp.14 = getv ? :Rez;
+        %tmp.15 = getv %tmp.14 :Fonts;
+        %tmp.16 = getv %tmp.15 :SmolTT;
+        %tmp.17 = invoke %tmp.11 %tmp.12(%tmp.16);
+        putv self :SmolPS %tmp.17;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_27_26_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 34; ]
+    function onLayout(dc as Dc) as Void {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_34_40_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 35 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 40 8 ]
+        %tmp.10 = 180;
+        putv self :cx %tmp.10;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 41 8 ]
+        %tmp.11 = 180;
+        putv self :cy %tmp.11;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_34_40_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 47; ]
+    function onShow() as Void {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_47_30_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 48 8 ]
+        %tmp.1 = false;
+        putv self :isHidden %tmp.1;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_47_30_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 53; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_53_40_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 55 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.5 = lgetv %dc;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 58 8 ]
+        %tmp.6 = self;
+        %tmp.7 = getv function %tmp.6 :drawHoursMinutes;
+        %tmp.9 = lgetv %dc;
+        invoke %tmp.6 %tmp.7(%tmp.9);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 60 8 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_8_if_stmt:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_12_begin:
+        %tmp.11 = getv ? :isLowPowerMode;
+        %tmp.12 = not %tmp.11;
+        %tmp.13 = dup %tmp.12;
+        bf %tmp.13 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_31_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_31_true:
+        %tmp.15 = getv ? :isHidden;
+        %tmp.16 = not %tmp.15;
+        %tmp.17 = and %tmp.12 %tmp.16;
+        push %tmp.17;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_31_end:
+        %tmp.18 = phi [%tmp.13 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_12_begin] [%tmp.17 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_31_true] [%tmp.18 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_31_end];
+        bf %tmp.18 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_8_if_false;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_8_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_42_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 61 12 ]
+        %tmp.19 = self;
+        %tmp.20 = getv function %tmp.19 :drawHighPower;
+        %tmp.22 = lgetv %dc;
+        invoke %tmp.19 %tmp.20(%tmp.22);
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_42_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_8_if_false:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_62_15_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 63 12 ]
+        %tmp.23 = self;
+        %tmp.24 = getv function %tmp.23 :drawLowPower;
+        %tmp.26 = lgetv %dc;
+        invoke %tmp.23 %tmp.24(%tmp.26);
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_62_15_stop:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_60_8_if_end:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_53_40_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 67; ]
+    private
+    function drawHoursMinutes(dc) {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 68 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_stop" ]
+        %clockTime.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 69 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_stop" ]
+        %hours.2 = local;
+        %tmp.4 = lgetv %clockTime.1;
+        %tmp.5 = getv %tmp.4 :hour;
+        %tmp.6 = 12;
+        %tmp.7 = mod %tmp.5 %tmp.6;
+        lputv %hours.2 %tmp.7;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 70 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_stop" ]
+        %minutes.3 = local;
+        %tmp.8 = lgetv %clockTime.1;
+        %tmp.9 = getv %tmp.8 :min;
+        %tmp.10 = getv function %tmp.9 :format;
+        %tmp.11 = "%02d";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        lputv %minutes.3 %tmp.12;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 71 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_stop" ]
+        %AMPM.4 = local;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_begin:
+        %tmp.13 = lgetv %clockTime.1;
+        %tmp.14 = getv %tmp.13 :hour;
+        %tmp.15 = 12;
+        %tmp.16 = lt %tmp.14 %tmp.15;
+        bf %tmp.16 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_false;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_true:
+        %tmp.17 = "AM";
+        push %tmp.17;
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_false:
+        %tmp.18 = "PM";
+        push %tmp.18;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_end:
+        %tmp.19 = phi [%tmp.16 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_begin] [%tmp.17 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_true] [%tmp.18 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_false] [%tmp.19 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_71_19_end];
+        lputv %AMPM.4 %tmp.19;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 73 8 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_73_8_if_stmt:
+        %tmp.21 = lgetv %hours.2;
+        %tmp.22 = 0;
+        %tmp.23 = eq %tmp.21 %tmp.22;
+        bf %tmp.23 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_73_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_73_8_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_73_24_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 74 12 ]
+        %tmp.24 = 12;
+        lputv %hours.2 %tmp.24;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_73_24_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_73_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_73_8_if_end:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 78 8 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :setColor;
+        %tmp.27 = getm $.Toybox.Graphics;
+        %tmp.28 = getv %tmp.27 :COLOR_WHITE;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 79 8 ]
+        %tmp.31 = lgetv %dc;
+        %tmp.32 = getv function %tmp.31 :drawText;
+        %tmp.34 = getv ? :cx;
+        %tmp.36 = getv ? :cy;
+        %tmp.38 = getv ? :BiggPS;
+        %tmp.40 = lgetv %hours.2;
+        %tmp.41 = ":";
+        %tmp.42 = add %tmp.40 %tmp.41;
+        %tmp.44 = lgetv %minutes.3;
+        %tmp.45 = add %tmp.42 %tmp.44;
+        %tmp.46 = getm $.Toybox.Graphics;
+        %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_CENTER;
+        %tmp.48 = getm $.Toybox.Graphics;
+        %tmp.49 = getv %tmp.48 :TEXT_JUSTIFY_VCENTER;
+        %tmp.50 = bitor %tmp.47 %tmp.49;
+        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36, %tmp.38, %tmp.45, %tmp.50);
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_67_42_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 127; ]
+    private
+    function drawHighPower(dc) {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 130 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %now.1 = local;
+        %tmp.2 = getv ? :Time;
+        %tmp.3 = getv function %tmp.2 :now;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %now.1 %tmp.4;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 131 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %date.2 = local;
+        %tmp.5 = getm $.Toybox.Time.Gregorian;
+        %tmp.6 = getv function %tmp.5 :info;
+        %tmp.8 = lgetv %now.1;
+        %tmp.10 = getv ? :Time;
+        %tmp.11 = getv %tmp.10 :FORMAT_MEDIUM;
+        %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.8, %tmp.11);
+        lputv %date.2 %tmp.12;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 134 8 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :setColor;
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :COLOR_WHITE;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 135 8 ]
+        %tmp.19 = lgetv %dc;
+        %tmp.20 = getv function %tmp.19 :drawText;
+        %tmp.22 = getv ? :cx;
+        %tmp.24 = getv ? :cy;
+        %tmp.25 = 75;
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        %tmp.28 = getv ? :SmolPS;
+        %tmp.29 = getm $.Toybox.Lang;
+        %tmp.30 = getv function %tmp.29 :format;
+        %tmp.31 = "$1$";
+        %tmp.32 = newa 1;
+        %tmp.33 = lgetv %date.2;
+        %tmp.34 = getv %tmp.33 :day_of_week;
+        %tmp.35 = dup %tmp.32;
+        %tmp.36 = aputv %tmp.35 0 %tmp.34;
+        %tmp.37 = invoke %tmp.29 %tmp.30(%tmp.31, %tmp.36);
+        %tmp.38 = getv function %tmp.37 :toUpper;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = "    ";
+        %tmp.41 = add %tmp.39 %tmp.40;
+        %tmp.42 = getm $.Toybox.Lang;
+        %tmp.43 = getv function %tmp.42 :format;
+        %tmp.44 = "$1$";
+        %tmp.45 = newa 1;
+        %tmp.46 = lgetv %date.2;
+        %tmp.47 = getv %tmp.46 :day;
+        %tmp.48 = dup %tmp.45;
+        %tmp.49 = aputv %tmp.48 0 %tmp.47;
+        %tmp.50 = invoke %tmp.42 %tmp.43(%tmp.44, %tmp.49);
+        %tmp.51 = getv function %tmp.50 :toUpper;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        %tmp.53 = add %tmp.41 %tmp.52;
+        %tmp.54 = getm $.Toybox.Graphics;
+        %tmp.55 = getv %tmp.54 :TEXT_JUSTIFY_CENTER;
+        %tmp.56 = getm $.Toybox.Graphics;
+        %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_VCENTER;
+        %tmp.58 = bitor %tmp.55 %tmp.57;
+        invoke %tmp.19 %tmp.20(%tmp.22, %tmp.26, %tmp.28, %tmp.53, %tmp.58);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 154 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %info.3 = local;
+        %tmp.60 = getv ? :ActivityMonitor;
+        %tmp.61 = getv function %tmp.60 :getInfo;
+        %tmp.62 = invoke %tmp.60 %tmp.61();
+        lputv %info.3 %tmp.62;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 155 2 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %steps_str.4 = local;
+        %tmp.63 = getm $.Toybox.Lang;
+        %tmp.64 = getv function %tmp.63 :format;
+        %tmp.65 = "$1$";
+        %tmp.66 = newa 1;
+        %tmp.67 = lgetv %info.3;
+        %tmp.68 = getv %tmp.67 :steps;
+        %tmp.69 = 1000;
+        %tmp.70 = div %tmp.68 %tmp.69;
+        %tmp.71 = getv function %tmp.70 :format;
+        %tmp.72 = "%.1f";
+        %tmp.73 = invoke %tmp.70 %tmp.71(%tmp.72);
+        %tmp.74 = dup %tmp.66;
+        %tmp.75 = aputv %tmp.74 0 %tmp.73;
+        %tmp.76 = invoke %tmp.63 %tmp.64(%tmp.65, %tmp.75);
+        lputv %steps_str.4 %tmp.76;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 156 8 ]
+        %tmp.77 = lgetv %dc;
+        %tmp.78 = getv function %tmp.77 :drawText;
+        %tmp.80 = getv ? :cx;
+        %tmp.82 = getv ? :cy;
+        %tmp.83 = 75;
+        %tmp.84 = add %tmp.82 %tmp.83;
+        %tmp.86 = getv ? :SmolPS;
+        %tmp.88 = lgetv %steps_str.4;
+        %tmp.89 = "K";
+        %tmp.90 = add %tmp.88 %tmp.89;
+        %tmp.91 = getm $.Toybox.Graphics;
+        %tmp.92 = getv %tmp.91 :TEXT_JUSTIFY_CENTER;
+        %tmp.93 = getm $.Toybox.Graphics;
+        %tmp.94 = getv %tmp.93 :TEXT_JUSTIFY_VCENTER;
+        %tmp.95 = bitor %tmp.92 %tmp.94;
+        invoke %tmp.77 %tmp.78(%tmp.80, %tmp.84, %tmp.86, %tmp.90, %tmp.95);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 163 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %distance_str.5 = local;
+        %tmp.96 = getm $.Toybox.Lang;
+        %tmp.97 = getv function %tmp.96 :format;
+        %tmp.98 = "$1$";
+        %tmp.99 = newa 1;
+        %tmp.100 = lgetv %info.3;
+        %tmp.101 = getv %tmp.100 :distance;
+        %tmp.102 = 0.00001;
+        %tmp.103 = mul %tmp.101 %tmp.102;
+        %tmp.104 = getv function %tmp.103 :format;
+        %tmp.105 = "%.1f";
+        %tmp.106 = invoke %tmp.103 %tmp.104(%tmp.105);
+        %tmp.107 = dup %tmp.99;
+        %tmp.108 = aputv %tmp.107 0 %tmp.106;
+        %tmp.109 = invoke %tmp.96 %tmp.97(%tmp.98, %tmp.108);
+        lputv %distance_str.5 %tmp.109;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 164 8 ]
+        %tmp.110 = lgetv %dc;
+        %tmp.111 = getv function %tmp.110 :drawText;
+        %tmp.113 = getv ? :cx;
+        %tmp.114 = 100;
+        %tmp.115 = add %tmp.113 %tmp.114;
+        %tmp.117 = getv ? :cy;
+        %tmp.118 = 75;
+        %tmp.119 = add %tmp.117 %tmp.118;
+        %tmp.121 = getv ? :SmolPS;
+        %tmp.123 = lgetv %distance_str.5;
+        %tmp.124 = getm $.Toybox.Graphics;
+        %tmp.125 = getv %tmp.124 :TEXT_JUSTIFY_CENTER;
+        %tmp.126 = getm $.Toybox.Graphics;
+        %tmp.127 = getv %tmp.126 :TEXT_JUSTIFY_VCENTER;
+        %tmp.128 = bitor %tmp.125 %tmp.127;
+        invoke %tmp.110 %tmp.111(%tmp.115, %tmp.119, %tmp.121, %tmp.123, %tmp.128);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 171 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %temperature_str.6 = local;
+        %tmp.129 = getm $.Toybox.Weather;
+        %tmp.130 = getv function %tmp.129 :getCurrentConditions;
+        %tmp.131 = invoke %tmp.129 %tmp.130();
+        %tmp.132 = getv %tmp.131 :temperature;
+        %tmp.133 = getv function %tmp.132 :format;
+        %tmp.134 = "%0.0f";
+        %tmp.135 = invoke %tmp.132 %tmp.133(%tmp.134);
+        lputv %temperature_str.6 %tmp.135;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 172 8 ]
+        %tmp.136 = lgetv %dc;
+        %tmp.137 = getv function %tmp.136 :drawText;
+        %tmp.139 = getv ? :cx;
+        %tmp.140 = 100;
+        %tmp.141 = sub %tmp.139 %tmp.140;
+        %tmp.143 = getv ? :cy;
+        %tmp.144 = 75;
+        %tmp.145 = add %tmp.143 %tmp.144;
+        %tmp.147 = getv ? :SmolPS;
+        %tmp.149 = lgetv %temperature_str.6;
+        %tmp.150 = " °C";
+        %tmp.151 = add %tmp.149 %tmp.150;
+        %tmp.152 = getm $.Toybox.Graphics;
+        %tmp.153 = getv %tmp.152 :TEXT_JUSTIFY_CENTER;
+        %tmp.154 = getm $.Toybox.Graphics;
+        %tmp.155 = getv %tmp.154 :TEXT_JUSTIFY_VCENTER;
+        %tmp.156 = bitor %tmp.153 %tmp.155;
+        invoke %tmp.136 %tmp.137(%tmp.141, %tmp.145, %tmp.147, %tmp.151, %tmp.156);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 181 8 ]
+        %tmp.157 = lgetv %dc;
+        %tmp.158 = getv function %tmp.157 :setColor;
+        %tmp.159 = getm $.Toybox.Graphics;
+        %tmp.160 = getv %tmp.159 :COLOR_DK_GRAY;
+        %tmp.161 = getm $.Toybox.Graphics;
+        %tmp.162 = getv %tmp.161 :COLOR_TRANSPARENT;
+        invoke %tmp.157 %tmp.158(%tmp.160, %tmp.162);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 182 8 ]
+        %tmp.163 = lgetv %dc;
+        %tmp.164 = getv function %tmp.163 :drawText;
+        %tmp.166 = getv ? :cx;
+        %tmp.168 = getv ? :cy;
+        %tmp.169 = 103;
+        %tmp.170 = add %tmp.168 %tmp.169;
+        %tmp.172 = getv ? :SmolPS;
+        %tmp.173 = "STEPS";
+        %tmp.174 = getm $.Toybox.Graphics;
+        %tmp.175 = getv %tmp.174 :TEXT_JUSTIFY_CENTER;
+        %tmp.176 = getm $.Toybox.Graphics;
+        %tmp.177 = getv %tmp.176 :TEXT_JUSTIFY_VCENTER;
+        %tmp.178 = bitor %tmp.175 %tmp.177;
+        invoke %tmp.163 %tmp.164(%tmp.166, %tmp.170, %tmp.172, %tmp.173, %tmp.178);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 189 8 ]
+        %tmp.179 = lgetv %dc;
+        %tmp.180 = getv function %tmp.179 :drawText;
+        %tmp.182 = getv ? :cx;
+        %tmp.183 = 100;
+        %tmp.184 = add %tmp.182 %tmp.183;
+        %tmp.186 = getv ? :cy;
+        %tmp.187 = 103;
+        %tmp.188 = add %tmp.186 %tmp.187;
+        %tmp.190 = getv ? :SmolPS;
+        %tmp.191 = "KM";
+        %tmp.192 = getm $.Toybox.Graphics;
+        %tmp.193 = getv %tmp.192 :TEXT_JUSTIFY_CENTER;
+        %tmp.194 = getm $.Toybox.Graphics;
+        %tmp.195 = getv %tmp.194 :TEXT_JUSTIFY_VCENTER;
+        %tmp.196 = bitor %tmp.193 %tmp.195;
+        invoke %tmp.179 %tmp.180(%tmp.184, %tmp.188, %tmp.190, %tmp.191, %tmp.196);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 196 8 ]
+        %tmp.197 = lgetv %dc;
+        %tmp.198 = getv function %tmp.197 :drawText;
+        %tmp.200 = getv ? :cx;
+        %tmp.201 = 100;
+        %tmp.202 = sub %tmp.200 %tmp.201;
+        %tmp.204 = getv ? :cy;
+        %tmp.205 = 103;
+        %tmp.206 = add %tmp.204 %tmp.205;
+        %tmp.208 = getv ? :SmolPS;
+        %tmp.209 = "WTHR";
+        %tmp.210 = getm $.Toybox.Graphics;
+        %tmp.211 = getv %tmp.210 :TEXT_JUSTIFY_CENTER;
+        %tmp.212 = getm $.Toybox.Graphics;
+        %tmp.213 = getv %tmp.212 :TEXT_JUSTIFY_VCENTER;
+        %tmp.214 = bitor %tmp.211 %tmp.213;
+        invoke %tmp.197 %tmp.198(%tmp.202, %tmp.206, %tmp.208, %tmp.209, %tmp.214);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 204 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %battery_str.7 = local;
+        %tmp.215 = getm $.Toybox.System;
+        %tmp.216 = getv function %tmp.215 :getSystemStats;
+        %tmp.217 = invoke %tmp.215 %tmp.216();
+        %tmp.218 = getv %tmp.217 :battery;
+        %tmp.219 = getv function %tmp.218 :format;
+        %tmp.220 = "%02d";
+        %tmp.221 = invoke %tmp.218 %tmp.219(%tmp.220);
+        lputv %battery_str.7 %tmp.221;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 205 8 ]
+        %tmp.222 = lgetv %dc;
+        %tmp.223 = getv function %tmp.222 :drawText;
+        %tmp.225 = getv ? :cx;
+        %tmp.227 = getv ? :cy;
+        %tmp.228 = 145;
+        %tmp.229 = add %tmp.227 %tmp.228;
+        %tmp.231 = getv ? :SmolPS;
+        %tmp.233 = lgetv %battery_str.7;
+        %tmp.234 = " %";
+        %tmp.235 = add %tmp.233 %tmp.234;
+        %tmp.236 = getm $.Toybox.Graphics;
+        %tmp.237 = getv %tmp.236 :TEXT_JUSTIFY_CENTER;
+        %tmp.238 = getm $.Toybox.Graphics;
+        %tmp.239 = getv %tmp.238 :TEXT_JUSTIFY_VCENTER;
+        %tmp.240 = bitor %tmp.237 %tmp.239;
+        invoke %tmp.222 %tmp.223(%tmp.225, %tmp.229, %tmp.231, %tmp.235, %tmp.240);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 214 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %dataabove_y1.8 = local;
+        %tmp.242 = getv ? :cy;
+        %tmp.243 = 151;
+        %tmp.244 = sub %tmp.242 %tmp.243;
+        lputv %dataabove_y1.8 %tmp.244;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 215 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %dataabove_y2.9 = local;
+        %tmp.246 = getv ? :cy;
+        %tmp.247 = 123;
+        %tmp.248 = sub %tmp.246 %tmp.247;
+        lputv %dataabove_y2.9 %tmp.248;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 216 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %bbIterator.10 = local;
+        %tmp.249 = getm $.Toybox.SensorHistory;
+        %tmp.250 = getv function %tmp.249 :getBodyBatteryHistory;
+        %tmp.251 = newd 1;
+        %tmp.253 = const :period;
+        %tmp.254 = 1;
+        %tmp.255 = dup %tmp.251;
+        %tmp.256 = aputv %tmp.255 %tmp.253 %tmp.254;
+        %tmp.257 = invoke %tmp.249 %tmp.250(%tmp.256);
+        lputv %bbIterator.10 %tmp.257;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 217 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %bbsample.11 = local;
+        %tmp.258 = lgetv %bbIterator.10;
+        %tmp.259 = getv function %tmp.258 :next;
+        %tmp.260 = invoke %tmp.258 %tmp.259();
+        lputv %bbsample.11 %tmp.260;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 218 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %stressIterator.12 = local;
+        %tmp.261 = getm $.Toybox.SensorHistory;
+        %tmp.262 = getv function %tmp.261 :getStressHistory;
+        %tmp.263 = newd 1;
+        %tmp.265 = const :period;
+        %tmp.266 = 1;
+        %tmp.267 = dup %tmp.263;
+        %tmp.268 = aputv %tmp.267 %tmp.265 %tmp.266;
+        %tmp.269 = invoke %tmp.261 %tmp.262(%tmp.268);
+        lputv %stressIterator.12 %tmp.269;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 219 8 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_8_if_stmt:
+        %tmp.271 = lgetv %bbsample.11;
+        %tmp.272 = null;
+        %tmp.273 = ne %tmp.271 %tmp.272;
+        bf %tmp.273 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_8_if_false;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_8_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_30_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 220 12 ]
+        %tmp.274 = lgetv %bbsample.11;
+        %tmp.275 = as %tmp.274 { (!Null) };
+        %tmp.276 = getv %tmp.275 :data;
+        %tmp.277 = getv function %tmp.276 :format;
+        %tmp.278 = "%d";
+        %tmp.279 = invoke %tmp.276 %tmp.277(%tmp.278);
+        lputv %bbsample.11 %tmp.279;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_30_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_8_if_false:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_221_14_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 222 12 ]
+        %tmp.280 = "---";
+        lputv %bbsample.11 %tmp.280;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_221_14_stop:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_219_8_if_end:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 224 8 ]
+        %tmp.281 = lgetv %dc;
+        %tmp.282 = getv function %tmp.281 :setColor;
+        %tmp.283 = getm $.Toybox.Graphics;
+        %tmp.284 = getv %tmp.283 :COLOR_WHITE;
+        %tmp.285 = getm $.Toybox.Graphics;
+        %tmp.286 = getv %tmp.285 :COLOR_TRANSPARENT;
+        invoke %tmp.281 %tmp.282(%tmp.284, %tmp.286);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 225 8 ]
+        %tmp.287 = lgetv %dc;
+        %tmp.288 = getv function %tmp.287 :drawText;
+        %tmp.290 = getv ? :cx;
+        %tmp.291 = 65;
+        %tmp.292 = sub %tmp.290 %tmp.291;
+        %tmp.294 = lgetv %dataabove_y1.8;
+        %tmp.296 = getv ? :SmolPS;
+        %tmp.298 = lgetv %bbsample.11;
+        %tmp.299 = getm $.Toybox.Graphics;
+        %tmp.300 = getv %tmp.299 :TEXT_JUSTIFY_CENTER;
+        %tmp.301 = getm $.Toybox.Graphics;
+        %tmp.302 = getv %tmp.301 :TEXT_JUSTIFY_VCENTER;
+        %tmp.303 = bitor %tmp.300 %tmp.302;
+        invoke %tmp.287 %tmp.288(%tmp.292, %tmp.294, %tmp.296, %tmp.298, %tmp.303);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 232 8 ]
+        %tmp.304 = lgetv %dc;
+        %tmp.305 = getv function %tmp.304 :setColor;
+        %tmp.306 = getm $.Toybox.Graphics;
+        %tmp.307 = getv %tmp.306 :COLOR_DK_GRAY;
+        %tmp.308 = getm $.Toybox.Graphics;
+        %tmp.309 = getv %tmp.308 :COLOR_TRANSPARENT;
+        invoke %tmp.304 %tmp.305(%tmp.307, %tmp.309);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 233 8 ]
+        %tmp.310 = lgetv %dc;
+        %tmp.311 = getv function %tmp.310 :drawText;
+        %tmp.313 = getv ? :cx;
+        %tmp.314 = 65;
+        %tmp.315 = sub %tmp.313 %tmp.314;
+        %tmp.317 = lgetv %dataabove_y2.9;
+        %tmp.319 = getv ? :SmolPS;
+        %tmp.320 = "BB";
+        %tmp.321 = getm $.Toybox.Graphics;
+        %tmp.322 = getv %tmp.321 :TEXT_JUSTIFY_CENTER;
+        %tmp.323 = getm $.Toybox.Graphics;
+        %tmp.324 = getv %tmp.323 :TEXT_JUSTIFY_VCENTER;
+        %tmp.325 = bitor %tmp.322 %tmp.324;
+        invoke %tmp.310 %tmp.311(%tmp.315, %tmp.317, %tmp.319, %tmp.320, %tmp.325);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 241 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %heartRate.13 = local;
+        %tmp.327 = getv ? :Activity;
+        %tmp.328 = getv function %tmp.327 :getActivityInfo;
+        %tmp.329 = invoke %tmp.327 %tmp.328();
+        %tmp.330 = getv %tmp.329 :currentHeartRate;
+        lputv %heartRate.13 %tmp.330;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 242 8 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_242_8_if_stmt:
+        %tmp.332 = lgetv %heartRate.13;
+        %tmp.333 = null;
+        %tmp.334 = eq %tmp.332 %tmp.333;
+        bf %tmp.334 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_242_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_242_8_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_242_31_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 243 12 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_12_if_stmt:
+        %tmp.336 = getv ? :ActivityMonitor;
+        %tmp.338 = const :getHeartRateHistory;
+        %tmp.339 = canhazplz %tmp.336 %tmp.338;
+        bf %tmp.339 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_12_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_12_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_57_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 244 16 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_57_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_57_stop" ]
+        %HRH.14 = local;
+        %tmp.341 = getv ? :ActivityMonitor;
+        %tmp.342 = as %tmp.341 { (interface { var getHeartRateHistory; }) };
+        %tmp.343 = getv function %tmp.342 :getHeartRateHistory;
+        %tmp.344 = 1;
+        %tmp.345 = true;
+        %tmp.346 = invoke %tmp.342 %tmp.343(%tmp.344, %tmp.345);
+        lputv %HRH.14 %tmp.346;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 245 20 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_57_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_57_stop" ]
+        %HRS.15 = local;
+        %tmp.347 = lgetv %HRH.14;
+        %tmp.348 = getv function %tmp.347 :next;
+        %tmp.349 = invoke %tmp.347 %tmp.348();
+        lputv %HRS.15 %tmp.349;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 246 20 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_20_if_stmt:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_23_begin:
+        %tmp.351 = lgetv %HRS.15;
+        %tmp.352 = null;
+        %tmp.353 = ne %tmp.351 %tmp.352;
+        %tmp.354 = dup %tmp.353;
+        bf %tmp.354 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_36_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_36_true:
+        %tmp.355 = lgetv %HRS.15;
+        %tmp.356 = as %tmp.355 { (!Null) };
+        %tmp.357 = getv %tmp.356 :heartRate;
+        %tmp.359 = getv ? :ActivityMonitor;
+        %tmp.360 = getv %tmp.359 :INVALID_HR_SAMPLE;
+        %tmp.361 = ne %tmp.357 %tmp.360;
+        %tmp.362 = and %tmp.353 %tmp.361;
+        push %tmp.362;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_36_end:
+        %tmp.363 = phi [%tmp.354 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_23_begin] [%tmp.362 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_36_true] [%tmp.363 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_36_end];
+        bf %tmp.363 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_20_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_20_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_86_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 248 24 ]
+        %tmp.364 = lgetv %HRS.15;
+        %tmp.365 = as %tmp.364 { (!Null) };
+        %tmp.366 = getv %tmp.365 :heartRate;
+        lputv %heartRate.13 %tmp.366;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_86_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_20_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_246_20_if_end:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_57_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_12_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_243_12_if_end:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_242_31_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_242_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_242_8_if_end:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 253 8 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_8_if_stmt:
+        %tmp.368 = lgetv %heartRate.13;
+        %tmp.369 = null;
+        %tmp.370 = ne %tmp.368 %tmp.369;
+        bf %tmp.370 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_8_if_false;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_8_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_31_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 254 12 ]
+        %tmp.371 = lgetv %heartRate.13;
+        %tmp.372 = as %tmp.371 { (!Null) };
+        %tmp.373 = getv function %tmp.372 :format;
+        %tmp.374 = "%d";
+        %tmp.375 = invoke %tmp.372 %tmp.373(%tmp.374);
+        lputv %heartRate.13 %tmp.375;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_31_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_8_if_false:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_255_15_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 256 12 ]
+        %tmp.376 = "---";
+        lputv %heartRate.13 %tmp.376;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_255_15_stop:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_253_8_if_end:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 258 8 ]
+        %tmp.377 = lgetv %dc;
+        %tmp.378 = getv function %tmp.377 :setColor;
+        %tmp.379 = getm $.Toybox.Graphics;
+        %tmp.380 = getv %tmp.379 :COLOR_WHITE;
+        %tmp.381 = getm $.Toybox.Graphics;
+        %tmp.382 = getv %tmp.381 :COLOR_TRANSPARENT;
+        invoke %tmp.377 %tmp.378(%tmp.380, %tmp.382);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 259 8 ]
+        %tmp.383 = lgetv %dc;
+        %tmp.384 = getv function %tmp.383 :drawText;
+        %tmp.386 = getv ? :cx;
+        %tmp.388 = lgetv %dataabove_y1.8;
+        %tmp.390 = getv ? :SmolPS;
+        %tmp.392 = lgetv %heartRate.13;
+        %tmp.393 = getm $.Toybox.Graphics;
+        %tmp.394 = getv %tmp.393 :TEXT_JUSTIFY_CENTER;
+        %tmp.395 = getm $.Toybox.Graphics;
+        %tmp.396 = getv %tmp.395 :TEXT_JUSTIFY_VCENTER;
+        %tmp.397 = bitor %tmp.394 %tmp.396;
+        invoke %tmp.383 %tmp.384(%tmp.386, %tmp.388, %tmp.390, %tmp.392, %tmp.397);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 266 8 ]
+        %tmp.398 = lgetv %dc;
+        %tmp.399 = getv function %tmp.398 :setColor;
+        %tmp.400 = getm $.Toybox.Graphics;
+        %tmp.401 = getv %tmp.400 :COLOR_DK_GRAY;
+        %tmp.402 = getm $.Toybox.Graphics;
+        %tmp.403 = getv %tmp.402 :COLOR_TRANSPARENT;
+        invoke %tmp.398 %tmp.399(%tmp.401, %tmp.403);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 267 8 ]
+        %tmp.404 = lgetv %dc;
+        %tmp.405 = getv function %tmp.404 :drawText;
+        %tmp.407 = getv ? :cx;
+        %tmp.409 = lgetv %dataabove_y2.9;
+        %tmp.411 = getv ? :SmolPS;
+        %tmp.412 = "HR";
+        %tmp.413 = getm $.Toybox.Graphics;
+        %tmp.414 = getv %tmp.413 :TEXT_JUSTIFY_CENTER;
+        %tmp.415 = getm $.Toybox.Graphics;
+        %tmp.416 = getv %tmp.415 :TEXT_JUSTIFY_VCENTER;
+        %tmp.417 = bitor %tmp.414 %tmp.416;
+        invoke %tmp.404 %tmp.405(%tmp.407, %tmp.409, %tmp.411, %tmp.412, %tmp.417);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 275 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %stIterator.16 = local;
+        %tmp.418 = getm $.Toybox.SensorHistory;
+        %tmp.419 = getv function %tmp.418 :getStressHistory;
+        %tmp.420 = newd 1;
+        %tmp.422 = const :period;
+        %tmp.423 = 1;
+        %tmp.424 = dup %tmp.420;
+        %tmp.425 = aputv %tmp.424 %tmp.422 %tmp.423;
+        %tmp.426 = invoke %tmp.418 %tmp.419(%tmp.425);
+        lputv %stIterator.16 %tmp.426;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 276 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop" ]
+        %stsample.17 = local;
+        %tmp.427 = lgetv %stressIterator.12;
+        %tmp.428 = getv function %tmp.427 :next;
+        %tmp.429 = invoke %tmp.427 %tmp.428();
+        lputv %stsample.17 %tmp.429;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 277 8 ]
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_8_if_stmt:
+        %tmp.431 = lgetv %stsample.17;
+        %tmp.432 = null;
+        %tmp.433 = ne %tmp.431 %tmp.432;
+        bf %tmp.433 @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_8_if_false;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_8_if_true:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_30_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 278 12 ]
+        %tmp.434 = lgetv %stsample.17;
+        %tmp.435 = as %tmp.434 { (!Null) };
+        %tmp.436 = getv %tmp.435 :data;
+        %tmp.437 = getv function %tmp.436 :format;
+        %tmp.438 = "%d";
+        %tmp.439 = invoke %tmp.436 %tmp.437(%tmp.438);
+        lputv %stsample.17 %tmp.439;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_30_stop:
+        goto @C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_8_if_end;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_8_if_false:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_279_14_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 280 12 ]
+        %tmp.440 = "---";
+        lputv %stsample.17 %tmp.440;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_279_14_stop:
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_277_8_if_end:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 282 8 ]
+        %tmp.441 = lgetv %dc;
+        %tmp.442 = getv function %tmp.441 :setColor;
+        %tmp.443 = getm $.Toybox.Graphics;
+        %tmp.444 = getv %tmp.443 :COLOR_WHITE;
+        %tmp.445 = getm $.Toybox.Graphics;
+        %tmp.446 = getv %tmp.445 :COLOR_TRANSPARENT;
+        invoke %tmp.441 %tmp.442(%tmp.444, %tmp.446);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 283 8 ]
+        %tmp.447 = lgetv %dc;
+        %tmp.448 = getv function %tmp.447 :drawText;
+        %tmp.450 = getv ? :cx;
+        %tmp.451 = 65;
+        %tmp.452 = add %tmp.450 %tmp.451;
+        %tmp.454 = lgetv %dataabove_y1.8;
+        %tmp.456 = getv ? :SmolPS;
+        %tmp.458 = lgetv %stsample.17;
+        %tmp.459 = getm $.Toybox.Graphics;
+        %tmp.460 = getv %tmp.459 :TEXT_JUSTIFY_CENTER;
+        %tmp.461 = getm $.Toybox.Graphics;
+        %tmp.462 = getv %tmp.461 :TEXT_JUSTIFY_VCENTER;
+        %tmp.463 = bitor %tmp.460 %tmp.462;
+        invoke %tmp.447 %tmp.448(%tmp.452, %tmp.454, %tmp.456, %tmp.458, %tmp.463);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 290 8 ]
+        %tmp.464 = lgetv %dc;
+        %tmp.465 = getv function %tmp.464 :setColor;
+        %tmp.466 = getm $.Toybox.Graphics;
+        %tmp.467 = getv %tmp.466 :COLOR_DK_GRAY;
+        %tmp.468 = getm $.Toybox.Graphics;
+        %tmp.469 = getv %tmp.468 :COLOR_TRANSPARENT;
+        invoke %tmp.464 %tmp.465(%tmp.467, %tmp.469);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 291 8 ]
+        %tmp.470 = lgetv %dc;
+        %tmp.471 = getv function %tmp.470 :drawText;
+        %tmp.473 = getv ? :cx;
+        %tmp.474 = 65;
+        %tmp.475 = add %tmp.473 %tmp.474;
+        %tmp.477 = lgetv %dataabove_y2.9;
+        %tmp.479 = getv ? :SmolPS;
+        %tmp.480 = "ST";
+        %tmp.481 = getm $.Toybox.Graphics;
+        %tmp.482 = getv %tmp.481 :TEXT_JUSTIFY_CENTER;
+        %tmp.483 = getm $.Toybox.Graphics;
+        %tmp.484 = getv %tmp.483 :TEXT_JUSTIFY_VCENTER;
+        %tmp.485 = bitor %tmp.482 %tmp.484;
+        invoke %tmp.470 %tmp.471(%tmp.475, %tmp.477, %tmp.479, %tmp.480, %tmp.485);
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_127_39_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 304; ]
+    private
+    function drawLowPower(dc) {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_304_38_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 305 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_304_38_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_304_38_stop" ]
+        %now.1 = local;
+        %tmp.2 = getv ? :Time;
+        %tmp.3 = getv function %tmp.2 :now;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %now.1 %tmp.4;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 306 8 ]
+        [ "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_304_38_start" "C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_304_38_stop" ]
+        %date.2 = local;
+        %tmp.5 = getm $.Toybox.Time.Gregorian;
+        %tmp.6 = getv function %tmp.5 :info;
+        %tmp.8 = lgetv %now.1;
+        %tmp.10 = getv ? :Time;
+        %tmp.11 = getv %tmp.10 :FORMAT_MEDIUM;
+        %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.8, %tmp.11);
+        lputv %date.2 %tmp.12;
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 308 8 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :setColor;
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :COLOR_LT_GRAY;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 309 8 ]
+        %tmp.19 = lgetv %dc;
+        %tmp.20 = getv function %tmp.19 :drawText;
+        %tmp.22 = getv ? :cx;
+        %tmp.24 = getv ? :cy;
+        %tmp.25 = 75;
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        %tmp.28 = getv ? :SmolPS;
+        %tmp.29 = getm $.Toybox.Lang;
+        %tmp.30 = getv function %tmp.29 :format;
+        %tmp.31 = "$1$";
+        %tmp.32 = newa 1;
+        %tmp.33 = lgetv %date.2;
+        %tmp.34 = getv %tmp.33 :day_of_week;
+        %tmp.35 = dup %tmp.32;
+        %tmp.36 = aputv %tmp.35 0 %tmp.34;
+        %tmp.37 = invoke %tmp.29 %tmp.30(%tmp.31, %tmp.36);
+        %tmp.38 = getv function %tmp.37 :toUpper;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = "    ";
+        %tmp.41 = add %tmp.39 %tmp.40;
+        %tmp.42 = getm $.Toybox.Lang;
+        %tmp.43 = getv function %tmp.42 :format;
+        %tmp.44 = "$1$";
+        %tmp.45 = newa 1;
+        %tmp.46 = lgetv %date.2;
+        %tmp.47 = getv %tmp.46 :day;
+        %tmp.48 = dup %tmp.45;
+        %tmp.49 = aputv %tmp.48 0 %tmp.47;
+        %tmp.50 = invoke %tmp.42 %tmp.43(%tmp.44, %tmp.49);
+        %tmp.51 = getv function %tmp.50 :toUpper;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        %tmp.53 = add %tmp.41 %tmp.52;
+        %tmp.54 = getm $.Toybox.Graphics;
+        %tmp.55 = getv %tmp.54 :TEXT_JUSTIFY_CENTER;
+        %tmp.56 = getm $.Toybox.Graphics;
+        %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_VCENTER;
+        %tmp.58 = bitor %tmp.55 %tmp.57;
+        invoke %tmp.19 %tmp.20(%tmp.22, %tmp.26, %tmp.28, %tmp.53, %tmp.58);
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_304_38_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 318; ]
+    function onHide() as Void {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_318_30_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 319 8 ]
+        %tmp.1 = true;
+        putv self :isHidden %tmp.1;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_318_30_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 323; ]
+    function onExitSleep() as Void {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_323_35_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 324 8 ]
+        %tmp.1 = false;
+        putv self :isLowPowerMode %tmp.1;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_323_35_stop:
+    }
+    [ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 328; ]
+    function onEnterSleep() as Void {
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_328_36_start:
+[ "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc" 329 8 ]
+        %tmp.1 = true;
+        putv self :isLowPowerMode %tmp.1;
+C_Users_hobly_OneDrive_2_EverythingElse_ML_AI_garmin_face_My_Garmin_Watch_Face_SuperSimple_source_SuperSimpleView_mc_328_36_stop:
+    }
+}
+[ @file = "C:\Users\hobly\OneDrive\2_EverythingElse\ML-AI\garmin_face\My-Garmin-Watch-Face\SuperSimple\source\SuperSimpleView.mc"; @line = 1; ]
+<init> {
+}

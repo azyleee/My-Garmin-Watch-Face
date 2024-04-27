@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "SuperSimple",
+			"path": "."
+		},
+		{
+			"path": "resources"
+		}
+	],
+	"settings": {}
+}
